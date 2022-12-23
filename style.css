@@ -1,0 +1,95 @@
+html,
+body {
+  margin: 0;
+  width: 100%;
+  height: 100%;
+  padding: 0;
+  font-family: sans-serif;
+  display: block;
+}
+
+.title {
+  font-size: 69px;  /* Nice. */
+}
+
+.awesome {
+  font-family: 'Dancing Script', cursive;
+}
+
+.engineer {
+  font-family: 'VT323', monospace;
+}
+
+.fixed-title {
+  position: absolute;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  display: block;
+}
+
+.fixed-title.loaded {
+  transition: all 1s ease;
+  color: white !important;
+  background-color: black;
+  width: 100%;
+  top: 0;
+  height: 69px;
+  line-height: 69px;
+  display: flex;
+  justify-content: space-between;
+  transform: translate(-50%, 0);
+}
+
+.fixed-title.loaded .title {
+  transition: all 1s ease;
+  font-size: 2em;
+  margin-left: 25px;
+}
+
+.fixed-title.loaded .socials-inline {
+  margin-right: 15px;
+}
+
+.socials-inline {
+  text-align: center;
+}
+
+.socials-inline li {
+  display: inline-block;
+  margin: 0 10px;
+  font-size: 1.5em
+}
+
+.socials-inline li a, a:visited, a:active {
+  color: inherit;
+  transition: all 0.4s ease;
+}
+
+.socials-inline li a:hover {
+  color: purple;
+  transition: all 0.4s ease;
+  font-size: 1.6em;
+}
+
+.normal-font-size {
+  font-size: 1em !important; 
+}
+
+.content {
+  margin-top: 0px; 
+  background-color: rgb(233, 233, 233);
+  opacity: 0;
+  margin: auto;
+  padding: 20px;
+}
+
+.content.loaded {
+  margin-top: 89px;
+  opacity: 1;
+  transition: all 2s ease;
+}
+
+.content h1 {
+  text-align: center;
+}
