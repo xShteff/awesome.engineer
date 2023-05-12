@@ -1,69 +1,23 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <meta http-equiv="X-UA-Compatible" content="IE=edge">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>awesome.engineer</title>
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link rel="stylesheet" href="style.css">
-  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=VT323&display=swap" rel="stylesheet">
-  <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css" rel="stylesheet" />
-  <link href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,900&display=swap" rel="stylesheet" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/mdb-vue-ui-kit/css/mdb.min.css" />
-</head>
-
-<body>
-  <div id="app" class="container">
-    <div class="fixed-title" :class="{ loaded: !isLoading }">
-      <div class="title">
-        <span class="awesome">awesome</span>.<span class="engineer">engineer</span>
+   <head>
+      <meta charset="UTF-8">
+      <meta http-equiv="X-UA-Compatible" content="IE=edge">
+      <meta name="viewport" content="width=device-width, initial-scale=1.0">
+      <title>awesome.engineer</title>
+      <link rel="preconnect" href="https://fonts.googleapis.com">
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+      <link rel="stylesheet" href="style.css">
+      <link href="https://fonts.googleapis.com/css2?family=Dancing+Script&family=VT323&display=swap" rel="stylesheet">
+   </head>
+   <body>
+      <div id="app" class="container">
+      <div id="wrapper">
+         <span class="awesome">awesome</span>.<span class="engineer glitch" data-text="engineer">engineer</span>
+         <ul class="socials-inline">
+            <li><a href="https://github.com/xShteff" target="_blank" title="GitHub"><span>GitHub</span></a></li>
+            <li><a href="https://twitter.com/xShteff" target="_blank" title="Twitter"> <span>Twitter</span></a></li>
+         </ul>
       </div>
-      <ul class="socials-inline">
-        <li>
-          <a href="#" @click="isLoading = !isLoading" title="About me"><i class="far fa-question-circle"></i> <span v-if="isLoading">About</span> </a>
-        </li>
-        <li v-for="item in socialMedia">
-          <a :href="item.url" target="_blank" :title="item.title"><i :class="item.icon"></i> <span v-if="isLoading">{{ item.title }} </span></a>
-        </li>
-      </ul>
-    </div>
-    <div class="content" :class="{ loaded: !isLoading }">
-      <h1>Coming soon, on the world wide webs.</h1>
-      <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sit error adipisci dolor, quisquam assumenda fuga enim esse doloribus autem tempora a nam aliquid vitae vero expedita perferendis non hic amet?</p>
-    </div>
-  </div>
-  <script src="https://unpkg.com/vue@next"></script>
-  <script src="https://cdn.jsdelivr.net/npm/mdb-vue-ui-kit/js/mdb.umd.min.js"></script>
-  <script>
-    const App = {
-      components: {
-        mdbBtn: mdb.MDBBtn,
-        mdbIcon: mdb.MDBIcon
-      },
-      data: function () {
-        return {
-          socialMedia: [{
-            title: "GitHub",
-            url: "https://github.com/xShteff",
-            icon: "fab fa-github"
-          },
-          {
-            title: "Twitter",
-            url: "https://twitter.com/xShteff",
-            icon: "fab fa-twitter"
-          }],
-          isLoading: true
-        }
-      },
-      created: function () {
-        console.log("UwU");
-      },
-    };
-
-    Vue.createApp(App).mount("#app");
-  </script>
-</body>
-
+   </body>
 </html>
